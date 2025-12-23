@@ -1,6 +1,6 @@
 # 🧠 Breast Cancer Classification – From Scratch to Deep Learning
 
-This repository demonstrates **three different approaches** to solving a **binary classification problem** using the **Breast Cancer Wisconsin Diagnostic Dataset**.
+This project demonstrates **three different approaches** to solving a **binary classification problem** using the **Breast Cancer Wisconsin Diagnostic Dataset**.
 
 The project progresses from **classical machine learning implemented from scratch**, to **deep learning using frameworks**, and finally to a **fully custom deep neural network with Adam optimization built using NumPy only**.
 
