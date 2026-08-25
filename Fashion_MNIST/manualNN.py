@@ -1,12 +1,6 @@
 import numpy as np
 import tensorflow as tf
 
-data=tf.keras.datasets.fashion_mnist
-(trainimg,trainlabel),(testimg,testlabel)=data.load_data()
-trainimg=trainimg/255.0
-testimg=testimg/255.0import numpy as np
-import tensorflow as tf
-
 #-----Loading dataset-----
 
 data=tf.keras.datasets.fashion_mnist
