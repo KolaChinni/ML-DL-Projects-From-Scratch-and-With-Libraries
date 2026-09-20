@@ -31,8 +31,6 @@ model.compile(optimizer='adam',loss='sparse_categorical_crossentropy' , metrics=
 model.fit(trainimg,trainlabel,epochs=50,callbacks=[callbacks])
 loss,accuracy=model.evaluate(testimg,testlabel)
 cl=model.predict(testimg)
-#print(cl[0])
-#print(testlabel[0])
 
 #-------metrics--------
 
