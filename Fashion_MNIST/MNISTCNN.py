@@ -34,8 +34,7 @@ model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['
 model.fit(trainimg,trainlabel,epochs=100,callbacks=[callbacks])
 loss,accuracy=model.evaluate(testimg,testlabel)
 pr=model.predict(testimg) 
-#print(cl[0])
-#print(testlabel[0])
+
 #-------metrics--------
 print(f'classification report : \n {classification_report(testlabel,pr.argmax(axis=1))}')
 print(f'confusin matrix : \n {confusion_matrix(testlabel,pr.argmax(axis=1))}')
