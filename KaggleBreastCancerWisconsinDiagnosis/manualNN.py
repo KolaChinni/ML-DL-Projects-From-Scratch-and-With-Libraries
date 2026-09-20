@@ -62,6 +62,7 @@ def Forward_Backward(x_train,y_train,W1,W2,W3,b1,b2,b3,iter):
     alpha=0.001
     beta1,beta2=0.9,0.999
     eps=1e-8
+    # Main Loop which performs both forward and backward passes
     for epoch in range(iter):
         a1,a2,a3=Sequential(x_train,W1,W2,W3,b1,b2,b3)
         loss=np.mean(-(y_train*np.log(a3+eps)+(1-y_train)*np.log(1-a3+eps))) #loss calculation
@@ -79,7 +80,7 @@ def Forward_Backward(x_train,y_train,W1,W2,W3,b1,b2,b3,iter):
         dw1=np.dot(x_train.T,dldz1)
         db1=np.sum(dldz1,axis=0)
 
-        #-----------------Adam--------------------
+        #-----------------Adam Optimizer - updation --------------------
 
         bc1=1-beta1**(epoch+1)
         v_dw1=v_dw1*beta1+(1-beta1)*dw1
